@@ -1,0 +1,125 @@
+footer {
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    width: 100%;
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #010036);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0b8793, #000136); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #FFF;
+}
+
+.content-footer {
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    padding: 50px 0 100px;
+}
+
+.bloc {
+    flex-basis: 20%;
+    margin: 20px 70px;
+}
+
+/* contact */
+.footer-contact h3,
+.footer-services h3,
+.footer-schedule h3,
+.footer-medias h3 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.footer-contact p {
+    padding: 5px 0;
+}
+
+/* Services */
+
+
+.services-list,
+.schedule-list,
+.media-list {
+    list-style-type: none;
+}
+.services-list li {
+    margin: 10px;
+    padding: 4px 0;
+}
+.services-list a {
+    padding-right: 1em;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 400;
+}
+
+/* Medias */
+
+.media-list {
+    position: relative;
+    right: 40px;
+}
+.media-list svg {
+    width: 50px;
+    margin: 20px 10px;
+}
+.media-list a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 1000px) {
+
+    .content-footer {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    .bloc {
+        flex-basis: auto;
+        margin: 20px 20px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .content-footer {
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .bloc {
+        flex-basis: 70%;
+        /* margin: 10px; */
+    }
+    .footer-contact h3,
+    .footer-services h3,
+    .footer-schedule h3,
+    .footer-medias h3 {
+        padding-bottom: 3px;
+    }
+
+}
+
+.footer-schedule h3{
+    padding-left: 2em;
+}
+
+.schedule-list{
+    padding-right: 1em;
+    padding-bottom: 3em;
+}
+
+.schedule-list li{
+    padding-bottom: 20px;
+    width:  10em;
+}

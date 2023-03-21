@@ -1,0 +1,106 @@
+.container{
+   width: 90%;
+   max-width: 1400px;
+   margin: auto; 
+}
+
+.titre-container{
+    font-size: medium;
+    font-family: 'Montserrat';
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 3em;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    border-radius: 8px;
+    background: #22438C;
+    color: #FFF;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+        minmax(200px, 1fr));
+    grid-gap: 40px;
+    margin: 50px 10px;
+}
+
+.card-wrapper{
+    position: relative;
+    min-height: 300px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card-wrapper:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
+    font-weight: bold;
+    
+}
+
+.card-front,
+.card-back{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    padding: 2px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -wedkit-backface-visibility: hidden;
+}
+
+.card-front{
+    background: rgba(207, 207, 207, 0.279);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front>p{
+    text-align: center;
+    color: #000000;
+}
+
+.card-front>img{
+    position : relative;
+    border-radius: 10px;
+    top:  10px;
+    left : 45px;
+    max-width : 200px;
+    max-height: 160px;
+}
+
+
+.card-back{
+    background: rgba(207, 207, 207, 0.279);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-back a{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    background-color: #FFF;
+    border-color: #1B3A78;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-back a:hover{
+    background: #5080e0;
+}
